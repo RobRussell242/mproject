@@ -1,0 +1,24 @@
+// Toggle message when button clicked on Home Page
+function toggleMessage() {
+    var message = document.getElementById("message");
+    if (message.style.display === "none") {
+        message.style.display = "block";
+    } else {
+        message.style.display = "none";
+    }
+}
+
+// Validate Contact form inputs
+function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var error = document.getElementById("error");
+
+    if (name === "" || email === "") {
+        error.textContent = "Please fill out all fields.";
+        return false; // Prevent form submission
+    }
+    error.textContent = ""; // Clear error if valid
+    alert("Form submitted successfully!");
+    return true;
+}
